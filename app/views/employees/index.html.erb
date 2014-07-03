@@ -1,0 +1,12 @@
+<h1>List of All Employees</h1>
+
+
+<script type="text/x-handlebars">
+  {{ view App.ListEmployeesView }}
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    App.employeesController.loadAll(<%= @employees.to_json.html_safe %>);
+  });
+</script>
